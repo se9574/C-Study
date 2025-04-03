@@ -1,20 +1,30 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <limits.h>
 
 
 using namespace std;
 
 int main()
 {
-	int total, inputNumber;
+	int total, inputNumber, min, max;
 	cin >> total;
-	vector<int> v;
 	for (int i = 0;i < total;i++) {
 		cin >> inputNumber;
-		v.insert(v.begin() + i, inputNumber);
+		if (i == 0) {
+			min = inputNumber;
+			max = inputNumber;
+		}
+		else {
+			if (inputNumber > max) {
+				max = inputNumber;
+			}
+			if (inputNumber < min) {
+				min = inputNumber;
+			}
+		}
 	
 	}
-	sort(v.begin(), v.end());
-	cout << v[0] << " " << v[total - 1];
+	cout << min << " " << max;
 }
