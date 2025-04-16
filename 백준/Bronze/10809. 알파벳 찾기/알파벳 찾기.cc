@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	int alphabet[26] = { 0 };
+	int alphabet[26];
 	string s;
 	cin >> s;
 	for (char i = 'a';i <= 'z';i++) {
