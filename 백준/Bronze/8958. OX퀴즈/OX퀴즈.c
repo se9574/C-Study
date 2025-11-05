@@ -22,9 +22,8 @@ int main(void) {
 
     char tmp[81];                             
     for (int j = 0; j < t; j++) {
-        if (!fgets(tmp, sizeof(tmp), stdin)) return 1; 
-        size_t len = strcspn(tmp, "\n");        
-        tmp[len] = '\0';                       
+		scanf("%s", tmp);
+		size_t len = strlen(tmp);
         printf("%d\n", same(tmp, len));
     }
     return 0;
