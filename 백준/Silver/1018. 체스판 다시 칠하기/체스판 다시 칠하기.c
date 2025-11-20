@@ -49,7 +49,6 @@ int main(void) {
 	for(int i=0; i <= M - 8; i++) {
 		for(int j = 0; j <= N - 8; j++) {
 			char sub_arr[8][8];
-			int k, l;
 			for (int k = 0; k < 8; k++) {
 				for (int l = 0; l < 8; l++) {
 					sub_arr[k][l] = arr[i + k][j + l];
